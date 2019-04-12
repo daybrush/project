@@ -6,8 +6,8 @@ module.exports = ({
 return `
 {
   "name": "${name}",
-  "version": "0.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "new project",
   "main": "./dist/${lib}.js",
   "module": "./dist/${lib}.esm.js",
   "sideEffects": false,
@@ -19,7 +19,7 @@ return `
     "doc": "rm -rf ./doc && jsdoc -c jsdoc.json",
     "prerelease": "npm run build && prerelease --dirs=dist,doc",
     "release": "npm run build && npm run doc && release --dirs=dist,doc",
-    "release:init": "npm run build && release -i"
+    "release:init": "npm run build && release -i --dirs=dist,doc"
   },
   "repository": {
     "type": "git",
