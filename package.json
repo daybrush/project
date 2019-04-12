@@ -1,0 +1,27 @@
+{
+  "name": "@daybrush/project",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "help": "node ./index.js --help",
+    "test": "rm -rf test && mkdir test && cd test && node ../index.js -n @daybrush/project"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daybrush/project.git"
+  },
+  "bin": {
+    "project": "./index.js"
+  },
+  "author": "Daybrush",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/daybrush/project/issues"
+  },
+  "homepage": "https://github.com/daybrush/project#readme",
+  "dependencies": {
+    "args": "^5.0.1",
+    "sync-exec": "^0.6.2"
+  }
+}
