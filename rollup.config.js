@@ -1,39 +1,39 @@
 module.exports = ({
-    filename,
+    lib,
 }) => {
 return `
 import builder from "@daybrush/builder";
 
 export default builder([
     {
-        name: "${filename}",
+        name: "${lib}",
         input: "src/index.umd.ts",
-        output: "./dist/${filename}.js",
+        output: "./dist/${lib}.js",
     },
     {
-        name: "${filename}",
+        name: "${lib}",
         input: "src/index.umd.ts",
-        output: "./dist/${filename}.js",
+        output: "./dist/${lib}.js",
         uglify: true,
 
     },
     {
-        name: "${filename}",
+        name: "${lib}",
         input: "src/index.umd.ts",
-        output: "./dist/${filename}.pkgd.js",
+        output: "./dist/${lib}.pkgd.js",
         resolve: true,
     },
     {
-        name: "${filename}",
+        name: "${lib}",
         input: "src/index.umd.ts",
-        output: "./dist/${filename}.pkgd.min.js",
+        output: "./dist/${lib}.pkgd.min.js",
         resolve: true,
         uglify: true,
     },
     {
-        name: "${filename}",
+        name: "${lib}",
         input: "src/index.ts",
-        output: "./dist/${filename}.esm.js",
+        output: "./dist/${lib}.esm.js",
         exports: "named",
         format: "es",
     },
