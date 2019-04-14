@@ -6,6 +6,7 @@ const shell = require('./utils').shell;
 const pkgFunction = require('./package');
 const rollupFunction = require('./rollup.config');
 const jsdocFunction = require("./jsdoc");
+const utils = require("@daybrush/utils");
 const fs = require("fs");
 
 
@@ -16,13 +17,16 @@ const url = shell(`git remote get-url origin`).trim();
 
 const name = flags.name;
 const lib = name.split("/").slice(-1).join("").toLowerCase();
+const classname = utils.camelize(" " + lib);
+const filename = lib.toLowerCase();
 const pkg = pkgFunction({
   name: flags.name,
   url,
-  lib,
+  filename,
 });
 const rollupConfig = rollupFunction({
-    lib,
+    classname,
+    filename,
 });
 const jsdocConfig = jsdocFunction({
     lib,
@@ -38,11 +42,11 @@ fs.writeFileSync("./rollup.config.js", rollupConfig);
     "tsconfig.test.json",
     "tsconfig.declaration.json",
     "tslint.json",
-    ".gitignore",
-    ".npmignore",
-    ".editorconfig",
+    "1.gitignore",
+    "1.npmignore",
+    "1.editorconfig",
 ].forEach(filename => {
-    fs.copyFileSync(`${__dirname}/${filename}`, `./${filename}`);
+    fs.copyFileSync(`${__dirname}/${filename}`, `./${filename.replace(/^1/g, "")}`);
 });
 
 shell(`npm i @daybrush/utils --save`);

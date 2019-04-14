@@ -1,15 +1,15 @@
 module.exports = ({
   name,
   url,
-  lib,
+  filename,
 }) => {
 return `
 {
   "name": "${name}",
   "version": "0.0.1",
   "description": "new project",
-  "main": "./dist/${lib}.js",
-  "module": "./dist/${lib}.esm.js",
+  "main": "./dist/${filename}.js",
+  "module": "./dist/${filename}.esm.js",
   "sideEffects": false,
   "types": "declaration/index.d.ts",
   "scripts": {
