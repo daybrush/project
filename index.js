@@ -18,7 +18,7 @@ const url = shell(`git remote get-url origin`).trim();
 const name = flags.name;
 const lib = name.split("/").slice(-1).join("").toLowerCase();
 const classname = utils.camelize(" " + lib);
-const filename = lib.toLowerCase();
+const filename = classname.toLowerCase();
 const pkg = pkgFunction({
   name: flags.name,
   url,
