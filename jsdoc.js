@@ -10,8 +10,8 @@ module.exports = ({
     },
     "source": {
 		"include": ["./src", "README.md"],
-        "includePattern": "(.+\\.js(doc|x)?|.+\\.ts(doc|x)?)$",
-        "excludePattern": "(^|\\/|\\\\)_"
+        "includePattern": "(.+\\\\.js(doc|x)?|.+\\\\.ts(doc|x)?)$",
+        "excludePattern": "(^|\\\\/|\\\\\\\\)_"
     },
     "sourceType": "module",
     "tags": {
