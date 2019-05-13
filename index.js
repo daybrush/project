@@ -6,6 +6,8 @@ const shell = require('./utils').shell;
 const pkgFunction = require('./package');
 const rollupFunction = require('./rollup.config');
 const jsdocFunction = require("./jsdoc");
+const readmeFunction = require("./README");
+const licenseFunction = require("./LICENSE");
 const utils = require("@daybrush/utils");
 const fs = require("fs");
 
@@ -20,7 +22,7 @@ const lib = name.split("/").slice(-1).join("").toLowerCase();
 const classname = utils.camelize(" " + lib);
 const filename = classname.toLowerCase();
 const pkg = pkgFunction({
-  name: flags.name,
+  name,
   url,
   filename,
 });
@@ -30,12 +32,19 @@ const rollupConfig = rollupFunction({
 });
 const jsdocConfig = jsdocFunction({
     lib,
-})
+});
+const readme = readmeFunction({
+    name,
+    filename,
+});
+const license = licenseFunction();
 
 
 fs.writeFileSync("./package.json", pkg);
 fs.writeFileSync("./jsdoc.json", jsdocConfig);
 fs.writeFileSync("./rollup.config.js", rollupConfig);
+fs.writeFileSync("./README.md", readme);
+fs.writeFileSync("./LICENSE", license);
 
 [
     "tsconfig.json",
