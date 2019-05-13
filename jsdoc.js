@@ -22,6 +22,9 @@ module.exports = ({
         "cleverLinks": false,
         "monospaceLinks": false
     },
+    "linkMap": {
+        "IObject": "http://daybrush.com/utils/release/latest/doc/global.html#ObjectInterface"
+    },
     "docdash": {
         "menu": {
             "Github repo": {
