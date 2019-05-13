@@ -1,4 +1,4 @@
-module.export = () =>`MIT License
+module.exports = () =>`MIT License
 
 Copyright (c) ${new Date().getFullYear()} Daybrush
 

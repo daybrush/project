@@ -1,4 +1,4 @@
-module.export = ({ name, filename }) =>
+module.exports = ({ name, filename }) =>
 `# ${name} [![npm version](https://badge.fury.io/js/${encodeURIComponent(name)}.svg)](https://badge.fury.io/js/${encodeURIComponent(name)})
 
 
@@ -6,10 +6,11 @@ module.export = ({ name, filename }) =>
 ### npm
 ${"```"}bash
 $ npm install ${name}
+${"```"}
 
 ### scripts
 * Unpackaged
-${"```"}
+
 ${"```"}html
 <script src="//daybrush.com/${name}/release/latest/dist/${filename}.min.js"></script>
 ${"```"}

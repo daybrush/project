@@ -1,11 +1,12 @@
 {
   "name": "@daybrush/project",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "",
   "main": "index.js",
   "scripts": {
     "help": "node ./index.js --help",
-    "test": "rm -rf test && mkdir test && cd test && node ../index.js -n @daybrush/project"
+    "test": "rm -rf test && mkdir test && cd test && node ../index.js -n @daybrush/project",
+    "test2": "rm -rf test && mkdir test && cd test && node ../index.js -n scenejs-timeline"
   },
   "repository": {
     "type": "git",

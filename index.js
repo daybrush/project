@@ -6,8 +6,8 @@ const shell = require('./utils').shell;
 const pkgFunction = require('./package');
 const rollupFunction = require('./rollup.config');
 const jsdocFunction = require("./jsdoc");
-const readmeFunction = require("./README");
-const licenseFunction = require("./LICENSE");
+const readmeFunction = require("./readme");
+const licenseFunction = require("./license");
 const utils = require("@daybrush/utils");
 const fs = require("fs");
 
