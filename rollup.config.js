@@ -14,7 +14,7 @@ export default builder([
     {
         name: "${classname}",
         input: "src/index.umd.ts",
-        output: "./dist/${filename}.js",
+        output: "./dist/${filename}.min.js",
         uglify: true,
 
     },
