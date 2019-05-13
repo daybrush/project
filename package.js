@@ -8,7 +8,7 @@ return `
   "name": "${name}",
   "version": "0.0.1",
   "description": "new project",
-  "main": "./dist/${filename}.js",
+  "main": "./dist/${filename}.cjs.js",
   "module": "./dist/${filename}.esm.js",
   "sideEffects": false,
   "types": "declaration/index.d.ts",

@@ -37,6 +37,12 @@ export default builder([
         exports: "named",
         format: "es",
     },
+    {
+        input: "src/index.ts",
+        output: "./dist/${filename}.cjs.js",
+        exports: "named",
+        format: "cjs",
+    },
 ]);
 `;
 }
