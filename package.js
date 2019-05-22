@@ -19,7 +19,7 @@ return `
     "doc": "rm -rf ./doc && jsdoc -c jsdoc.json",
     "prerelease": "npm run build && prerelease --dirs=dist,doc",
     "release": "npm run build && npm run doc && release --dirs=dist,doc",
-    "release:init": "npm run build && release -i --dirs=dist,doc"
+    "release:init": "npm run build && npm run doc && release -i --dirs=dist,doc"
   },
   "repository": {
     "type": "git",
