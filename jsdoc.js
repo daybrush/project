@@ -1,5 +1,5 @@
 module.exports = ({
-    lib,
+    url,
 }) => `
 {
     "plugins": [],
@@ -28,7 +28,7 @@ module.exports = ({
     "docdash": {
         "menu": {
             "Github repo": {
-                "href": "https://github.com/daybrush/${lib}",
+                "href": "${url}",
                 "target": "_blank",
                 "class": "menu-item",
                 "id": "repository"

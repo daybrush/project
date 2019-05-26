@@ -15,12 +15,12 @@ const fs = require("fs");
 args.option('name', 'Project name');
 
 const flags = args.parse(process.argv);
-const url = shell(`git remote get-url origin`).trim();
+const url = shell(`git remote get-url origin`).trim().replace(/\.git$/g, "");
 
 const name = flags.name;
 const lib = name.split("/").slice(-1).join("").toLowerCase();
 const classname = utils.camelize(" " + lib);
-const filename = classname.toLowerCase();
+const filename = lib;
 const pkg = pkgFunction({
   name,
   url,
@@ -31,7 +31,7 @@ const rollupConfig = rollupFunction({
     filename,
 });
 const jsdocConfig = jsdocFunction({
-    lib,
+    url,
 });
 const readme = readmeFunction({
     name,
