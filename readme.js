@@ -38,7 +38,7 @@ Please give a ⭐️ if this project helped you!
 
 ## 👏 Contributing
 
-If you have any questions or requests or want to contribute to `${name}` or other packages, please write the [issue](https://github.com/daybrush/${name}/issues) or give me a Pull Request freely.
+If you have any questions or requests or want to contribute to ${"`"}${name}${"`"} or other packages, please write the [issue](https://github.com/daybrush/${name}/issues) or give me a Pull Request freely.
 
 ## 🐞 Bug Report
 
