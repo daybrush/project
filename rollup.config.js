@@ -10,24 +10,12 @@ export default builder([
         name: "${classname}",
         input: "src/index.umd.ts",
         output: "./dist/${filename}.js",
-    },
-    {
-        name: "${classname}",
-        input: "src/index.umd.ts",
-        output: "./dist/${filename}.min.js",
-        uglify: true,
-
-    },
-    {
-        name: "${classname}",
-        input: "src/index.umd.ts",
-        output: "./dist/${filename}.pkgd.js",
         resolve: true,
     },
     {
         name: "${classname}",
         input: "src/index.umd.ts",
-        output: "./dist/${filename}.pkgd.min.js",
+        output: "./dist/${filename}.min.js",
         resolve: true,
         uglify: true,
     },
