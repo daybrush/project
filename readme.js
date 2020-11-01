@@ -13,21 +13,12 @@ module.exports = ({ name, filename }) =>
 * [API documentation](https://daybrush.com/${name}/release/latest/doc/)
 
 ## ⚙️ Installation
-### npm
 ${"```"}bash
 $ npm install ${name}
 ${"```"}
 
-### scripts
-* Unpackaged
-
 ${"```"}html
 <script src="//daybrush.com/${name}/release/latest/dist/${filename}.min.js"></script>
-${"```"}
-
-* Packaged
-${"```"}html
-<script src="//daybrush.com/${name}/release/latest/dist/${filename}.pkgd.min.js"></script>
 ${"```"}
 
 ## 🚀 How to use
